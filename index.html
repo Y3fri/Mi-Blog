@@ -2,32 +2,62 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="descripcion" content="Esta pagina es mi blog">
-  <meta name="robots" content="index,follow">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Mi blog</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>My Personal Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
-  <header>
-    <nav>
-      Sobre mi
-    </nav>
-  </header>
-  <main>
-    <section>
-      <article>
-        <figure>
-          <img src="./images/Foto.jpeg" alt="Yeferson Andrey Guzmán Silva">
-        </figure>
-      </article>
-    </section>
-  </main>
-  <footer>
+    <header>
+        <div>
+            <h1 class="title1">Yeferson Andrey Guzmán Silva</h1>
+            <p class="paragraph1">Systems and Computer Engineer</p>
+        </div>
+        <nav class="rinse">
+            <ul class="list">
+                <li class="element"><button class="click" type="button" onclick="showSlide(0)" class="active"
+                        aria-label="Slide 1">About Me</button></li>
+                <li class="element"> <button class="click" type="button" onclick="showSlide(1)"
+                        aria-label="Slide 2">Projects</button></li>
+                <li class="element"><button class="click" type="button" onclick="showSlide(2)"
+                        aria-label="Slide 3">Contact</button></li>
+            </ul>
+        </nav>
 
-  </footer>
+    </header>
+    <main>
+        <div class="language">
+            <span class="en">English</span>
+            <input type="checkbox" class="check">
+            <span class="es">Spanish</span>
+        </div>
+        <section id="inicio">
+            <div id="myCarousel" class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <figure>
+                            <img src="./images/Foto.jpeg" alt="Yeferson Andrey Guzmán Silva">
+                        </figure>
+                        <h2>Welcome to My Personal Portfolio</h2>
+                        <p>Discover my experiences and projects in the world of software development.</p>
+                    </div>
+                    <div class="carousel-item">
+                        Hello
+                    </div>
+                    <div class="carousel-item">
+                        AAA
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <footer class="footer">
+        <p>Hello</p>
+    </footer>
+    <script src="./assets/scripts/main.js"></script>
 </body>
 
 </html>
