@@ -1,42 +1,54 @@
+
+html{
+    font-size: 62.5%;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 .en {
-    padding-top: 5px;
+    padding-top: 0.5rem;
     color: #333;
 }
 
 .es {
-    padding-top: 5px;
+    padding-top: 0.5rem;
     color: #00a1ff;
 }
 
 .check {
     position: relative;
-    width: 50px;
+    width: 5rem;
+    height: 2.2rem;
 }
 
 .check:before {
     content: '';
+    align-items: center;
     position: absolute;
-    width: 50px;
-    height: 25px;
+    width: 5rem;
+    height: 2.5rem;
     background: #333;
-    border-radius: 25px;
+    border-radius: 2.5rem;
 }
 
 .check:after {
     content: '';
     position: absolute;
-    width: 25px;
-    height: 25px;
+    width: 2.5rem;
+    height: 2.5rem;
     background: #fff;
-    border-radius: 25px;
+    border-radius: 2.5rem;
     transition: 0.25s;
-    border: 2px solid #333;
+    border: 0.2rem solid #333;
     box-sizing: border-box;
 }
 
 .check:checked:after {
-    left: 25px;
-    border: 2px solid #00a1ff;
+    left: 2.5rem;
+    border: 0.2rem solid #00a1ff;
 }
 
 .check:checked:before {
@@ -47,37 +59,43 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box;    
 }
 
 header {
     background-color: #FADA5E;
     color: #A91101;
-    padding: 20px;
+    padding: 2rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+main{
+    padding: 1rem 5rem;
+    
+}
+
 .title1 {
     margin: 0;
-
+    font-size: 3rem;
 }
 
 .paragraph1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 15px;
+    font-size: 2rem;
     margin: 0;
 }
 .language{
-    margin: 10px;    
+    font-size: 2rem;
+    margin: 1rem;    
     display: flex;
     justify-content: right;
-
+    align-items: center;
 }
 .rinse {
     color: #A91101;
-    padding: 10px;
+    padding: 1rem;
 }
 
 .rinse .list {
@@ -88,11 +106,12 @@ header {
 
 .rinse .list .element {
     display: inline;
-    margin-right: 20px;
+    margin-right: 0rem;
 }
 
 .click {
-    font-size: 18px;
+    padding: 1rem 1rem 0rem;
+    font-size:1.8rem;
     border: none;
     background: #FADA5E;
     color: #A91101;
@@ -102,15 +121,128 @@ header {
     color:black;
 }
 
+.section2{
+    font-size: 1.3rem;
+    padding-top: 5rem; 
+}
+
+.text1{
+    padding-top: 2rem;
+    font-size: 1.3rem;     
+}
+.text1 p{    
+    text-align: justify;
+    line-height: 2.4rem;
+    padding-top: 1rem;
+}
+
+@media only screen and (max-width: 660px) {
+    header {
+        background-color: #FADA5E;
+        color: #A91101;
+        padding: 2rem 2rem 0rem;
+        flex-direction: column;                        
+    }
+
+    main{
+        padding: 1rem 4rem;        
+    }
+
+    .language{
+        font-size: 1.5rem;
+        margin: 1rem;    
+        display: flex;
+        justify-content: right;
+        align-items: center;
+    }
+
+    .check {
+        position: relative;
+        width: 5rem;
+        height: 1rem;
+    }
+    
+    .check:before {
+        content: '';
+        align-items: center;
+        position: absolute;
+        width: 5rem;
+        height: 2rem;
+        background: #333;
+        border-radius: 2.5rem;
+    }
+    
+    .check:after {
+        content: '';
+        position: absolute;
+        width: 2.5rem;
+        height: 2rem;
+        background: #fff;
+        border-radius: 2.5rem;
+        transition: 0.25s;
+        border: 0.2rem solid #333;
+        box-sizing: border-box;
+    }
+    
+    .check:checked:after {
+        left: 2.5rem;
+        border: 0.2rem solid #00a1ff;
+    }
+    
+    .check:checked:before {
+        background: #00a1ff;
+    }
+    
+
+    .title1{
+        font-size: 2.7rem;
+    }
+
+    .paragraph1{
+        font-size: 2rem;
+    }
+
+    .click{
+        font-size: 2rem;
+    }
+  
+}
+
+
+@media only screen and (max-width: 380px) {
+    header {
+        background-color: #FADA5E;
+        color: #A91101;
+        padding: 2rem 2rem 0rem;
+        flex-direction: column;                        
+    }
+
+    main{
+        padding: 1rem 2rem;        
+    }
+    .title1{
+        font-size: 2.3rem;
+    }
+
+    .paragraph1{
+        font-size: 1.5rem;
+    } 
+
+    .click{
+        font-size: 1.5rem;
+    }
+  
+}
+
 .section {
-    padding: 20px;
+    padding: 2rem;
 }
 
 .footer {
     background-color: #333;
     color: #fff;
     text-align: center;
-    padding: 10px;
+    padding: 1rem;
     position: fixed;
     bottom: 0;
     position: relative;
@@ -124,25 +256,74 @@ header {
 }
 
 .carousel-inner {
-    
     display: flex;
     transition: transform 0.5s ease-in-out;
 }
 
-.carousel-item {   
+.carousel-item {    
     display: grid;
     place-content: center;
-    flex: 0 0 100%;
+    flex: 0 0 100%;    
 }
-.carousel-item img {
-    width: 200px;
-    height: 200px;
-    max-height: 300px; 
-    margin: 0 auto; 
-    display: block; 
-    border-radius: 140px;
-    border: 3px solid #333;
+.carousel-item div .foto {
+    width: 20rem;
+    height: 20rem;               
+    border-radius: 14rem;
+    border: 0.3rem solid #333;    
     
+}
+
+.carousel-item div{    
+    display: flexbox;
+    justify-content: center;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+}
+
+.hability{
+    padding-top: 3rem;
+}
+
+.hability ul{
+    padding: 2.5rem;
+    display: flex;  
+    flex-wrap: wrap;
+    align-items: center;    
+    
+    justify-content: center;
+    list-style: none;
+}
+
+.hability li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 4rem;
+    padding: 0 2.5rem;
+}
+
+.hability img{
+    width: 20rem;
+    height: 20rem;
+    padding: 2rem;
+}
+
+
+.line-container {    
+    position: relative;
+    width: 100%;
+    height: 0.5rem; 
+    background-color: #ccc;
+}
+
+.colored-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;    
 }
 
 
