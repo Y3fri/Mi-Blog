@@ -11,16 +11,29 @@ function idioma() {
 }
 
 let currentIndex = 0;
+const items = document.querySelectorAll('.carousel-item');
 
 function showSlide(index) {
-    const carouselInner = document.querySelector('.carousel-inner');
-    const slides = document.querySelectorAll('.carousel-item');
-
+    items[currentIndex].classList.remove('active');
     currentIndex = index;
-
-    carouselInner.style.transform = `translateX(${-currentIndex * 100}%)`;
-
-    slides.forEach((slide, i) => {
-        slide.classList.toggle('active', i === currentIndex);
-    });
+    items[currentIndex].classList.add('active');
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const accordionButtons = document.querySelectorAll('.accordion-button');
+
+    accordionButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const content = button.nextElementSibling;
+            
+            button.classList.toggle('active');
+
+            if (button.classList.contains('active')) {
+                content.style.display = 'block';
+            } else {
+                content.style.display = 'none';
+            }
+        });
+    });
+});

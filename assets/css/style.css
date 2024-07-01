@@ -1,6 +1,7 @@
 
 html{
     font-size: 62.5%;
+    background-color: #e3edf3;
 }
 
 *{
@@ -136,6 +137,28 @@ main{
     padding-top: 1rem;
 }
 
+.pdf-button {      
+    padding: 10px 20px;
+    background-color: #FADA5E;
+    border: none;
+    border-radius: 8px;
+    color:  #A91101;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.pdf-button:hover {
+    background-color: #e0c653;
+}
+
+
+.pdf-button p {
+    margin: 0;
+}
+
 @media only screen and (max-width: 660px) {
     header {
         background-color: #FADA5E;
@@ -249,22 +272,27 @@ main{
     z-index: 0;
 }
 
-.carousel {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-}
-
 .carousel-inner {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+    position: relative;
+    width: 100%;
+    height: auto; 
 }
 
-.carousel-item {    
-    display: grid;
-    place-content: center;
-    flex: 0 0 100%;    
+.carousel-item {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
 }
+
+.carousel-item.active {
+    display: block;
+    position: relative;
+    min-height: 2rem;
+}
+
+
 .carousel-item div .foto {
     width: 20rem;
     height: 20rem;               
@@ -281,6 +309,8 @@ main{
 .centrar{
     display: flex;
     justify-content: center;
+    padding-top: 2rem;
+    border-top: 0.2rem solid #68656542;
 }
 
 .hability{
@@ -325,6 +355,7 @@ main{
     left: 0;
     height: 100%;    
 }
+
 
 
 
