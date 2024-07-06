@@ -59,3 +59,76 @@
     width: 11rem;
     height: 4rem;    
 }
+.photos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.ulrna{
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    list-style: none;
+}
+
+.parrafo1{
+    font-size: 1.4rem;
+    padding: 0.5rem;
+}
+
+.ulcontac{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    list-style-type: none;        
+}
+.ulcontac li {
+    padding-top : 1.2rem;
+}
+.alink {
+    
+    text-decoration: none;
+    color: #007BFF;
+}
+
+@media (max-width: 600px) {
+    .img1 {
+        width: 3rem; 
+        height: 3rem;
+    }
+    .img2{
+        width: 7rem; 
+        height: 2rem;
+    }
+}
+
+
+.gmail-btn {
+    display: inline-block;
+    background-color: #DB4437;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.gmail-btn:hover {
+    background-color: #C13524;
+}
+
+.whatsapp-btn {
+    display: inline-block;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.whatsapp-btn:hover {
+    background-color: #128C7E;
+}
